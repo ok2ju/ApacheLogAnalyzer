@@ -1,8 +1,7 @@
 package by.grsu.oop.ApacheLogAnalyzer;
 
-import by.grsu.oop.ApacheLogAnalyzer.model.Client;
 import by.grsu.oop.ApacheLogAnalyzer.model.Date;
-import by.grsu.oop.ApacheLogAnalyzer.model.Error;
+import by.grsu.oop.ApacheLogAnalyzer.model.Status;
 import by.grsu.oop.ApacheLogAnalyzer.model.Ip;
 import by.grsu.oop.ApacheLogAnalyzer.model.Method;
 import by.grsu.oop.ApacheLogAnalyzer.model.ObjectSize;
@@ -11,22 +10,13 @@ import by.grsu.oop.ApacheLogAnalyzer.model.Protocol;
 
 public class LogEntry {
 	
-	private Client client;
 	private Date date;
-	private Error error;
+	private Status status;
 	private Ip ip;
 	private Method method;
 	private ObjectSize objectSize;
 	private Path path;
 	private Protocol protocol;
-	
-	public Client getClient() {
-		return client;
-	}
-	
-	public void setClient(Client client) {
-		this.client = client;
-	}
 	
 	public Date getDate() {
 		return date;
@@ -36,12 +26,12 @@ public class LogEntry {
 		this.date = date;
 	}
 	
-	public Error getError() {
-		return error;
+	public Status getStatus() {
+		return status;
 	}
 	
-	public void setError(Error error) {
-		this.error = error;
+	public void setStatus(Status status) {
+		this.status = status;
 	}
 	
 	public Ip getIp() {

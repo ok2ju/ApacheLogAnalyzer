@@ -16,7 +16,6 @@ public class Log {
 		}
 		
 		return records;
-		
 	}
 	
 }

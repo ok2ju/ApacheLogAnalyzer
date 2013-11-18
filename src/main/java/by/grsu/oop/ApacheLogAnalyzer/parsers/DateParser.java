@@ -11,15 +11,15 @@ public class DateParser {
 	
 	public Date getDateObject(String textData) throws ParseException{
 		
-		Date date = new Date();
+		//dd/MMM/yyyy:HH:mm:ss Z
+		//dd.MM.yyyy HH:mm:ss Z
 		DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss Z");
 		
 		java.util.Date newDate = dateFormat.parse(textData);
 		GregorianCalendar gregorianCalendar = new GregorianCalendar();
 		gregorianCalendar.setTime(newDate);
-		date.setGregorianCalendar(gregorianCalendar);
 		
-		return date;
+		return new Date(gregorianCalendar);
 	}
 
 }

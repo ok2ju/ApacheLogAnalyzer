@@ -13,9 +13,7 @@ public class IpParser {
 			octetIntArray[i] = Integer.parseInt(octetTextArray[i]);
 		}
 		
-		Ip ip = new Ip(octetIntArray);
-		
-		return ip;
+		return new Ip(octetIntArray);
 		
 	}
 	
