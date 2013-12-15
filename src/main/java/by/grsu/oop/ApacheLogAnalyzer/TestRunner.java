@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
-import by.grsu.oop.ApacheLogAnalyzer.statistics.representative.TextStatisticPresenter;
+import by.grsu.oop.ApacheLogAnalyzer.statistics.StatsRepresenter;
 
 public class TestRunner {
 
@@ -18,12 +18,9 @@ public class TestRunner {
 		LogFileParser logFileParser = new LogFileParser();
 		List<LogEntry> records = logFileParser.getRecords();
 		
-		TextStatisticPresenter tsp = new TextStatisticPresenter(logFileParser);
-		System.out.println(tsp.showStatusFrequency());
-		System.out.println(tsp.showStatusPercent());
-		System.out.println(tsp.showStatusFrequencyByTime());
-		System.out.println(tsp.showStatusFrequencyPerDay());
-		System.out.println(tsp.showExtensionFrequency());
+		StatsRepresenter statsRepresenter = new StatsRepresenter(logFileParser);
+		statsRepresenter.showInConsole();
+		statsRepresenter.saveToFile("LogStatistic.txt");
 
 	}
 

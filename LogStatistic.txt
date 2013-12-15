@@ -1,0 +1,15 @@
+Number of different files:
+pdf - 5
+doc - 4
+txt - 1
+Number of different statuses:
+404 - 4
+501 - 4
+500 - 2
+Status percent ratio:
+404 - 40.0%
+501 - 40.0%
+500 - 20.0%
+Daily requests:
+13 hours - 10
+AFTERNOON - 10
